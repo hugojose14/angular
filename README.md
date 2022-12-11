@@ -101,7 +101,7 @@ A single page that is loaded in the initial request and then on that page when t
     id5["Definiciòn del componente <br/> principal a cargar"]
     id6["app.module.ts"]
     id7["Decorador"]
-    id8["-Selector </br> -Plantilla (template) </br> Estilo CSS (style)"]
+    id8["-Selector </br> -Plantilla (template) </br> -Estilo CSS (style)"]
 
     
     subgraph two [Flow Diagram Angular]
