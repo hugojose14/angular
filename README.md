@@ -114,7 +114,9 @@ A single page that is loaded in the initial request and then on that page when t
     id3 --> id7
     id7 --> id8
 ```
+#### Example flow diagram
 
+![Alt text](https://i.ibb.co/vQW3mmQ/Screenshot-2022-12-12-184643333.png "Optional title")
 
 
 ## Feedback
