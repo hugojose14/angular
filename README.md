@@ -139,11 +139,10 @@ Open your terminal and run next command
 ng generate component name-component
 #short form
 ng g c name-component
+#Command for create component inline (don't include html or css) 
+ng g c name-component -s -t 
     
 ```
-
-
-
 
 
 ## Feedback
