@@ -118,6 +118,33 @@ A single page that is loaded in the initial request and then on that page when t
 
 ![Alt text](https://i.ibb.co/vQW3mmQ/Screenshot-2022-12-12-184643333.png "Optional title")
 
+## How to create a component?
+
+
+```mermaid
+ graph TD
+    id1["Create components"]
+    id2["Handbook"]
+    id3["Automatic (CLI)"]
+    
+    id1 --> id2
+    id1 --> id3
+    
+```
+
+#### Command for create a component 
+
+Open your terminal and run next command
+```bash
+ng generate component name-component
+#short form
+ng g c name-component
+    
+```
+
+
+
+
 
 ## Feedback
 
