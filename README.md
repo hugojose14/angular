@@ -143,6 +143,24 @@ ng g c name-component
 ng g c name-component -s -t 
     
 ```
+
+## Interpolation of string 
+
+Interpolation refers to embedding expressions into marked up text. By default, interpolation uses the double curly braces {{ and }} as delimiters.
+
+```html
+
+currentCustomer = 'Maria';
+<!--Use interpolation to display the value of this variable in the corresponding component template:-->
+<h3>Current customer: {{ currentCustomer }}</h3>
+
+<!--Angular replaces currentCustomer with the string value of the corresponding component property. In this case, the value is Maria.
+-->
+
+<p>{{title}}</p>
+<div><img alt="item" src="{{itemImageUrl}}"></div>
+```
+
 ## Run application (First App)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
