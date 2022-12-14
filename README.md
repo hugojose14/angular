@@ -165,6 +165,14 @@ currentCustomer = 'Maria';
 
 ![Alt text](https://i.ibb.co/bW4RBCB/5555555555555.png)
 
+#### Example: how to use binding? 
+
+![Alt text](https://i.ibb.co/JktV92Y/Example-1.png)
+
+![Alt text](https://i.ibb.co/sHdddr8/Example2.png)
+
+
+
 ## Run application (First App)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
@@ -199,6 +207,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 If you have any feedback, please reach out to us at hugo.jose.1@hotmail.com
 
 
+## References
+<a id="1">[1]</a> 
+https://angular.io/guide/event-binding
 
+<a id="2">[2]</a> 
+https://www.youtube.com/watch?v=FPjFXQf1pqM&list=PLU8oAlHdN5BnNAe8zXnuBNzKID39DUwcO&index=10 (this is the best Angular course)
     
 
