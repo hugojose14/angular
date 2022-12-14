@@ -171,6 +171,8 @@ currentCustomer = 'Maria';
 
 ![Alt text](https://i.ibb.co/sHdddr8/Example2.png)
 
+## Event Binding
+
 
 
 ## Run application (First App)
