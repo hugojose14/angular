@@ -161,6 +161,10 @@ currentCustomer = 'Maria';
 <div><img alt="item" src="{{itemImageUrl}}"></div>
 ```
 
+## Property Binding
+
+![Alt text](https://i.ibb.co/MZs7D3C/Screenshot-2022-12-13-2035444444.png "Optional title")
+
 ## Run application (First App)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
