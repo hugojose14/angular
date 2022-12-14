@@ -163,7 +163,7 @@ currentCustomer = 'Maria';
 
 ## Property Binding
 
-![Alt text](https://i.ibb.co/MZs7D3C/Screenshot-2022-12-13-2035444444.png "Optional title")
+![Alt text](https://i.ibb.co/bW4RBCB/5555555555555.png)
 
 ## Run application (First App)
 
