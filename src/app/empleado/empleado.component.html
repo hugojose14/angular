@@ -1,1 +1,64 @@
-<p>here would go an employee</p>
+<p>Nombre del empleado: {{nombre}}</p>
+<p>Apellido del empleado: {{apellido}}</p>
+<p>Edad del empleado: {{getEdadUsuario() + 1 > 18 ? "Mayor de edad": "Menor de edad"}}</p>
+<p>Empresa del empleado: {{enterprise}}</p>
+<p>Ocupaciòn del empleado: {{ocupacion.value}}</p> 
+<p>Cantidad de caracteres de la ocupaciòn: {{cantidadCaracteresOcupacion}}</p>
+
+<!--Con esta almohadilla # yo identifico al cuadro de texto-->
+<!--Le especificamos que es igual a 0 para que ejecute ese evento inmediatamente-->
+<!--El binding se coloca en el disable [disabled] = "habilitarCuadro"-->
+<!--Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled] = "habilitarCuadro">-->
+<!--Introduce la empresa: <input type="text" (input)="cambiaEmpresa($event)" > -->
+
+<br/>
+<br/>
+<!--Event binding en dos direcciones-->
+<!--Banana in box and ng model-->
+Introduce la empresa: <input type="text" [(ngModel)] = "enterprise">
+
+<br/>
+<br/>
+
+Ingrese la ocupaciòn : <input type="text" #ocupacion>
+<br/>
+<br/>
+<input type="button" value = "Enviar" (click)="calcularCantidadCaracteresOcupacion(ocupacion.value)">
+
+<br/>
+<br/>
+
+<p>{{textoDeRegistro}}</p> 
+
+
+<!--OTro ejemplo de binding -->
+<!--El event binding en este caso es que hay un puente entre este objeto y el typescript-->
+<!--$event es capturar el evento (objeto) que se crea al momento del event binding-->
+Registrado: <input type="radio" value= "si" name = "nRegistro" id="registro" [checked]="esUsuarioRegistrado" (click)="setUsuarioRegistrado($event)"/>
+<br/>
+No registrado: <input type="radio" value= "no" name = "nRegistro" id="registro"  (click)="setUsuarioRegistrado($event)"/>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<form action="/url">
+    <label for="username">Username: </label>
+    <input type="text" name = "username" id="username" #userName><br/><br/>
+    <label for="password"> Password: </label>
+    <input type="password" name="pwd" id="pwd" #password><br/><br/>
+    <input type="button" value = "Submit" (click)="validarCamposContrasena(userName, password)">
+</form>
+
+<br/>
+{{esCampoContrasenaVacio}}
+
+{{getRegistroUsuario()}}
+
+<br/>
+<br/>
+
+Introduce la empresa: <input type="text" [disabled]= "esCampoDisabled" >
+
+
+

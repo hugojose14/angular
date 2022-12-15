@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,9 @@ import { EmpleadoComponent } from './empleado/empleado.component';
     EmpleadoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    //Importar para utilizar NgModel
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
