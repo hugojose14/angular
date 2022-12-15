@@ -175,6 +175,9 @@ currentCustomer = 'Maria';
 
 ![Alt text](https://i.ibb.co/VW6fK5c/6666.png)
 
+## Biding bidirectional (Two way binding)
+
+https://i.ibb.co/KqH6fnc/777777.png
 
 
 ## Run application (First App)
