@@ -143,6 +143,57 @@ ng g c name-component
 ng g c name-component -s -t 
     
 ```
+
+## Interpolation of string 
+
+Interpolation refers to embedding expressions into marked up text. By default, interpolation uses the double curly braces {{ and }} as delimiters.
+
+```html
+
+currentCustomer = 'Maria';
+<!--Use interpolation to display the value of this variable in the corresponding component template:-->
+<h3>Current customer: {{ currentCustomer }}</h3>
+
+<!--Angular replaces currentCustomer with the string value of the corresponding component property. In this case, the value is Maria.
+-->
+
+<p>{{title}}</p>
+<div><img alt="item" src="{{itemImageUrl}}"></div>
+```
+
+## Property Binding
+
+![Alt text](https://i.ibb.co/bW4RBCB/5555555555555.png)
+
+#### Example: how to use binding? 
+
+![Alt text](https://i.ibb.co/JktV92Y/Example-1.png)
+
+![Alt text](https://i.ibb.co/sHdddr8/Example2.png)
+
+## Event Binding
+
+![Alt text](https://i.ibb.co/VW6fK5c/6666.png)
+
+## Biding bidirectional (Two way binding)
+![Alt text](https://i.ibb.co/KqH6fnc/777777.png)
+
+#### Example two way binding 
+
+![Alt text](https://i.ibb.co/z6VLr69/888888.png)
+
+![Alt text](https://i.ibb.co/dW6280m/999999.png)
+
+![Alt text](https://i.ibb.co/vdw1YB8/10000.png)
+
+#### Abstract property binding, event binding and two way binding (NgModel and banana in box)
+![Alt text](https://i.ibb.co/PDhwsrc/122222.png)
+
+## What need we for applicate two way binding? 
+
+* Use directive NgModel 
+* Use Banana in box  [()]
+
 ## Run application (First App)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
@@ -177,6 +228,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 If you have any feedback, please reach out to us at hugo.jose.1@hotmail.com
 
 
+## References
+<a id="1">[1]</a> 
+https://angular.io/guide/event-binding
 
+<a id="2">[2]</a> 
+https://www.youtube.com/watch?v=FPjFXQf1pqM&list=PLU8oAlHdN5BnNAe8zXnuBNzKID39DUwcO&index=10 (this is the best Angular course)
     
 
