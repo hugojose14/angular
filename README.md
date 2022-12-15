@@ -179,6 +179,10 @@ currentCustomer = 'Maria';
 
 https://i.ibb.co/KqH6fnc/777777.png
 
+## What need we for applicate two way binding? 
+
+* Use directive NgModel 
+* Use Banana in box  [()]
 
 ## Run application (First App)
 
