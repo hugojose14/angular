@@ -194,6 +194,14 @@ currentCustomer = 'Maria';
 * Use directive NgModel 
 * Use Banana in box  [()]
 
+## What is a Module in angular ? 
+
+Para poder continuar manteniendo este orden en nuestros proyectos, Angular, nos provee de módulos que son capaces de agrupar/contener en su interior a componentes, directivas, formularios, clases, interfaces, etc.
+
+Por tanto, los módulos son mecanismo para subdividir en partes nuestra aplicación. El proceso de subdividir una aplicación en módulos recibe el nombre de modularizar/modularización.
+
+![Alt text](https://i.ibb.co/3zJyL1v/modulo.png)
+
 ## Run application (First App)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
