@@ -176,8 +176,18 @@ currentCustomer = 'Maria';
 ![Alt text](https://i.ibb.co/VW6fK5c/6666.png)
 
 ## Biding bidirectional (Two way binding)
+![Alt text](https://i.ibb.co/KqH6fnc/777777.png)
 
-https://i.ibb.co/KqH6fnc/777777.png
+#### Example two way binding 
+
+![Alt text](https://i.ibb.co/z6VLr69/888888.png)
+
+![Alt text](https://i.ibb.co/dW6280m/999999.png)
+
+![Alt text](https://i.ibb.co/vdw1YB8/10000.png)
+
+#### Abstract property binding, event binding and two way binding (NgModel and banana in box)
+![Alt text](https://i.ibb.co/PDhwsrc/122222.png)
 
 ## What need we for applicate two way binding? 
 
