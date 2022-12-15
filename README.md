@@ -242,5 +242,9 @@ https://angular.io/guide/event-binding
 
 <a id="2">[2]</a> 
 https://www.youtube.com/watch?v=FPjFXQf1pqM&list=PLU8oAlHdN5BnNAe8zXnuBNzKID39DUwcO&index=10 (this is the best Angular course)
+
+<a id="1">[3}</a> 
+https://javadesde0.com/modularizando-nuestra-aplicacion-de-angular/
+
     
 
