@@ -202,6 +202,55 @@ Por tanto, los módulos son mecanismo para subdividir en partes nuestra aplicaci
 
 ![Alt text](https://i.ibb.co/3zJyL1v/modulo.png)
 
+## Directivas 
+
+#### ¿What is a directive? 
+
+- Elemento que se aplica a la etiqueta HTML que añaden funcionalidad a la etiqueta donde se aplican 
+- Nos van a permitir quitar elementos del DOM (Parrafos, imagenes, etc) de acuerdo a ciertas restricciones
+
+##### ¿How do they work?
+
+- Para modfificar la estructura del DOM 
+- Modificar la apariencia
+
+##### Directive Types
+
+```mermaid
+ graph TD
+    id1["Directivas"]
+    id2["Componente"]
+    id3["Estructura"]
+    id4["Atributo"]
+    id5["Angular"]
+    id6["Personalizadas"]
+    
+    id1 --> id2
+    id1 --> id3
+    id1 --> id4
+    id2 --> id5
+    id2 --> id6
+    
+```
+#Example directives
+                
++ Atributo
+    + ngClass
+    + ngStyle
+    + ngModel
++ Estructural 
+    + ngIf
+    + ngFor
+    + ngSwitch
+    + ngPlural
+    + ngTemplate
+    + ngComponentOutlet
++ Componente
+    + Angular (Agregar un decordador)
+       + @Component
+       + @Module
+    + Personalizadas (Custom)
+   
 ## Run application (First App)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
