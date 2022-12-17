@@ -1,0 +1,8 @@
+/*Destacar x cosa en mi clase (template)*/ 
+.paraDirectores{
+
+    color:red;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
