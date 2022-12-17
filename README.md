@@ -250,7 +250,37 @@ Por tanto, los módulos son mecanismo para subdividir en partes nuestra aplicaci
        + @Component
        + @Module
     + Personalizadas (Custom)
-   
+
+#### Diference between NgStyle vs NgClass
+
+**ngStyle** : Nos permite agregar un estilo a una propiedad  u objeto dentro del DOM (una etiqueta en especial por ejemplo) y se aplica utilizando la siguiente 
+directiva [ngStyle] = "{propiedad: condicion? 'x-estilo': 'y-estilo'}"
+
+```html
+<p *ngIf="registrado; else  sinRegistrar" >{{mensaje}} con el nombre: {{nombre}} {{apellido}}  
+  y tiene el cargo de: <span [ngStyle]="{color: cargo =='director'? 'red': 'black'}">{{cargo}}</span></p>
+```
+
+**ngClass**  : Nos permite agregar n cantidad de estilos externalizados a un elemento del DOM (ejemplo del *.componente.css aplico mis estilos y lo llamo utilizando la directica [ngClass] = "{propiedad-css: condicion}"
+
+  1. Necesitas crear en el *.component.css el estilo (debe ser una clase) -> inicia con "." una clase en css
+  2. Luego debes llamar ese estilo con la directiva [ngClass] = ""
+
+```css
+.paraDirectores{
+    color:red;
+    font-weight: bold;
+    text-decoration: underline;
+}
+```
+
+```html
+<p *ngIf="registrado; else  sinRegistrar" >{{mensaje}} con el nombre: {{nombre}} {{apellido}}  
+  y tiene el cargo de: <span [ngClass]="{paraDirectores:cargo=='director'}">{{cargo}}</span></p>
+```
+
+
+
 ## Run application (First App)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
