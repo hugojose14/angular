@@ -289,6 +289,29 @@ directiva [ngStyle] = "{propiedad: condicion? 'x-estilo': 'y-estilo'}"
 
 ![Alt text](https://i.ibb.co/rv23GRY/Input.png)
 
+#### Example @Input 
+
+1. Importa esto en tu componente hijo
+
+```angular
+import { Component, Input } from '@angular/core';
+```
+2. Colocar un identificador para cada propiedad que quiero enviar al componente hijo 
+![Alt text](https://i.ibb.co/QvQs7pQ/identificador.png)
+
+3. Apoyarse de la anotaciòn @Input en el componente hijo y setear las propiedades (cabe mencionar que debe ir el nombre de la propiedad que colocamos 
+con su identificador)
+
+```javascript
+export class EmpleadoHijoComponent {
+  @Input() empleadoDeLista:Empleado;
+  @Input() indice: number;
+}
+```
+
+4. Ya desde el componente hijo podemos acceder a las propiedades (con el nombre del identificador que le colocamos a la propiedad) 
+![Alt text](https://i.ibb.co/nwC1FDG/atributos.png)
+
 
 ## Run application (First App)
 
