@@ -279,6 +279,13 @@ directiva [ngStyle] = "{propiedad: condicion? 'x-estilo': 'y-estilo'}"
   y tiene el cargo de: <span [ngClass]="{paraDirectores:cargo=='director'}">{{cargo}}</span></p>
 ```
 
+## Comunicaciòn entre componentes (Enviar informaciòn padre -> hijo y hijo <- padre)
+
+**@Input** De padre a hijo
+
+**Ouput** De hijo a padre
+
+![Alt text](https://i.ibb.co/vPNzKkJ/image.png)
 
 
 ## Run application (First App)
