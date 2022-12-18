@@ -283,7 +283,7 @@ directiva [ngStyle] = "{propiedad: condicion? 'x-estilo': 'y-estilo'}"
 
 **@Input** De padre a hijo
 
-**Ouput** De hijo a padre
+**@Ouput** De hijo a padre
 
 ![Alt text](https://i.ibb.co/vPNzKkJ/image.png)
 
