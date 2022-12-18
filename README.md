@@ -287,6 +287,8 @@ directiva [ngStyle] = "{propiedad: condicion? 'x-estilo': 'y-estilo'}"
 
 ![Alt text](https://i.ibb.co/vPNzKkJ/image.png)
 
+![Alt text](https://i.ibb.co/rv23GRY/Input.png)
+
 
 ## Run application (First App)
 
