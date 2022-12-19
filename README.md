@@ -312,6 +312,40 @@ export class EmpleadoHijoComponent {
 4. Ya desde el componente hijo podemos acceder a las propiedades (con el nombre del identificador que le colocamos a la propiedad) 
 ![Alt text](https://i.ibb.co/nwC1FDG/atributos.png)
 
+#### Example Output (Enviar data del componente hijo al padre) 
+
+1. Importa esto en tu componente hijo
+
+```angular
+import { Output, EventEmitter } from '@angular/core';
+```
+2. Agregar el @Output y el mètodo en la clase del component.ts (hijo)
+
+```angular
+ @Output() caracteristicasEmpleados = new EventEmitter<string>();
+  
+  agregaCaracteristicas(value: string) {
+    this.caracteristicasEmpleados.emit(value);
+  }
+```
+3. Agregar en el template hijo lo sigiuiente
+
+![Alt text](https://i.ibb.co/4dnmLn9/output.png)
+
+4. Luego ir al componente padre y agregar lo siguiente 
+
+```javascript
+//Esto viene siendo el Array donde se va a agregar cada caracteristicas del empleado
+ caracteristicas:Array<String>=[];
+
+  agregarCaracteristica(nuevaCaracteristica:string){
+   this.caracteristicas.push(nuevaCaracteristica);
+  }
+```
+
+5. Luego en el template
+
+![Alt text](https://i.ibb.co/S0n3hT5/ouput-iteracion.png)
 
 ## Run application (First App)
 
