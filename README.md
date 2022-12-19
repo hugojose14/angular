@@ -349,6 +349,22 @@ import { Output, EventEmitter } from '@angular/core';
 
 ## Services
 
+Un servicio es típicamente una clase con un propósito limitado y bien definido. Debe hacer algo específico y hacerlo bien. Angular distingue los componentes de los servicios para aumentar la modularidad y la reutilización.
+
+Tal como la documentación de Angular indica, un Componente no debe tener la responsabilidad de consultar datos o almacenarlos, esa responsabilidad es para los Servicios.
+
+El trabajo de un servicio es el de controlar la información, desde obtenerla, almacenarla, actualizarla y compartirla con los componentes.
+
+No hay nada especial acerca de un Servicio en Angular, excepto que estos deben de integrarse con los componentes vía el inyector de Dependencias de Angular.
+
+#### Jerarquìa de un servicio en Angular 
+
+- A nivel global: Disponible para toda la aplicaciòn.
+- A nivel de modulo: Donde tenemos el servicio disponible solo a los componentes que 
+pertenecen a ese modulo.
+- A nivel de componente:  Que es donde tenemos el servicio disponible para dicho componente.
+
+
 
 
 ## Run application (First App)
@@ -392,8 +408,10 @@ https://angular.io/guide/event-binding
 <a id="2">[2]</a> 
 https://www.youtube.com/watch?v=FPjFXQf1pqM&list=PLU8oAlHdN5BnNAe8zXnuBNzKID39DUwcO&index=10 (this is the best Angular course)
 
-<a id="1">[3}</a> 
+<a id="3">[3}</a> 
 https://javadesde0.com/modularizando-nuestra-aplicacion-de-angular/
 
-    
+<a id="4">[4}</a> 
+https://codigofacilito.com/articulos/angular-services
 
+    
