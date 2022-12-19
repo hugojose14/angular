@@ -364,26 +364,29 @@ No hay nada especial acerca de un Servicio en Angular, excepto que estos deben d
 pertenecen a ese modulo.
 - A nivel de componente:  Que es donde tenemos el servicio disponible para dicho componente.
 
-#### Ejemplo de jerarquìa 
+#### Ejemplo de jerarquìa de servicios
 
-+ --app
-  + --one
-    + one.module.ts
-    + --services
+```bash
+--app
+  --one
+    one.module.ts
+    --services
 
-  + --two
-    + two.module.ts
-    + --services
+  --two
+    two.module.ts
+    --services
+```
 
-+ng g service one/services/myNewServiceFolderName/serviceOne --module one/one
+```bash
+ng g service one/services/myNewServiceFolderName/serviceOne --module one/one
 
-+ --one
-  + one.module.ts // service imported and added to providers.
-     + --services
-     + --yNewServiceFolderName
-      + serviceOne.service.ts
-      + serviceOne.service.spec.ts
-
+--one
+  one.module.ts // service imported and added to providers.
+  --services
+    --myNewServiceFolderName
+      serviceOne.service.ts
+      serviceOne.service.spec.ts
+```
 
 ## Run application (First App)
 
