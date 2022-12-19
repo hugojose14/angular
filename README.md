@@ -6,8 +6,24 @@ You can click the Preview link to take a look at your changes.
 
 # Angular For Begginers Course
 
-## 🛠 Skills do you need
+## 🛠 Basic concepts what do you need to know before learning Angular
 Javascript, Typescript, HTML, CSS...
+
+- HTML 5
+  - https://medium.com/hackernoon/learn-basic-html-be230361457
+  - https://medium.com/singapore-rails-learning-group/basic-html-concepts-you-absolutely-need-to-know-7767bb629924
+
+- CSS 
+  - https://medium.com/@iampika/html-and-css-fundamentals-6b8f7d90911b
+  - https://medium.com/@ankurdhamija83/understanding-the-concept-of-css-web-development-basics-bc7e864b864f
+  
+- Javascript 
+  - https://medium.com/swlh/introduction-to-javascript-basics-cf901c05ca47
+  - https://medium.com/entendiendo-javascript
+   
+- Typescript 
+  - https://medium.com/front-end-weekly/learn-typescript-in-15-minutes-bf921cf355f5
+  - https://medium.com/jspoint/typescript-a-beginners-guide-6956fe8bcf9e
 
 ## How to learn angular in 2022
 
@@ -388,10 +404,25 @@ ng g service one/services/myNewServiceFolderName/serviceOne --module one/one
       serviceOne.service.spec.ts
 ```
 
-#### You need learn more about services in angular 
-[services](https://medium.com/@cristianflores.ee/providers-en-angular-1832e8093e2a#:~:text=El%20servicio%20es%20una%20clase,el%20inyector%20ra%C3%ADz%20(AppModule). 
-)
+Para que un servicio en Angular se inyecte correctamente, se debe registrar en el módulo principal, en un módulo específico o en un componente. Un servicio registrado en el módulo principal será visible para toda la app.
 
+Un provider es una instrucción para el sistema de Inyección de Dependencias de cómo obtener un valor para una dependencia.
+
+Dependencia: al consumo de los servicios inyectables se le conoce como dependencia. Cada componente o servicio puede declarar en su constructor sus dependencias hacia servicios inyectables.
+
+**Fuente:** https://medium.com/@cristianflores.ee/providers-en-angular-1832e8093e2a#:~:text=El%20servicio%20es%20una%20clase,el%20inyector%20ra%C3%ADz%20(AppModule).
+
+## Ciclo de vida de un componente en angular 
+
+https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
+
+## Pruebas unitarias en Angular
+
+https://medium.com/swlh/angular-unit-testing-jasmine-karma-step-by-step-e3376d110ab4
+
+## Projecto bàsico de lo que deberìas saber en angular 
+
+https://medium.com/bb-tutorials-and-thoughts/how-to-get-started-with-angular-c3c209d6fe90
 
 ## Run application (First App)
 
@@ -426,7 +457,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 If you have any feedback, please reach out to us at hugo.jose.1@hotmail.com
 
-
 ## References
 <a id="1">[1]</a> 
 https://angular.io/guide/event-binding
@@ -439,5 +469,8 @@ https://javadesde0.com/modularizando-nuestra-aplicacion-de-angular/
 
 <a id="4">[4}</a> 
 https://codigofacilito.com/articulos/angular-services
+
+<a id="5">[5}</a> 
+
 
     
