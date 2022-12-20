@@ -412,6 +412,24 @@ Dependencia: al consumo de los servicios inyectables se le conoce como dependenc
 
 **Fuente:** https://medium.com/@cristianflores.ee/providers-en-angular-1832e8093e2a#:~:text=El%20servicio%20es%20una%20clase,el%20inyector%20ra%C3%ADz%20(AppModule).
 
+## Routing (Poder enrutar con otras paginas)
+
+- Nuestra app hoy dìa:
+
+![image](https://user-images.githubusercontent.com/45336770/208721006-361002a0-9088-4b97-90c1-40b41582fe7f.png)
+Imagen tomada de: https://www.youtube.com/watch?v=BhRpBIhRWbY&list=PLU8oAlHdN5BnNAe8zXnuBNzKID39DUwcO&index=24
+
+- Donde queremos llegar: 
+
+![image](https://user-images.githubusercontent.com/45336770/208721288-d10b8921-034c-4ca7-a056-b5da4ac58c0c.png)
+Imagen tomada de: https://www.youtube.com/watch?v=BhRpBIhRWbY&list=PLU8oAlHdN5BnNAe8zXnuBNzKID39DUwcO&index=24
+
+**Importante a la hora de utilizar Routing**
+
+1. Tendremos una barra de navegaciòn con: Home, Proyectos, Quiènes somos, Contacto 
+2. Importante que es el componente principal (App.Component) el encargado de gestionar el enrutamiento
+
+
 ## Ciclo de vida de un componente en angular 
 
 https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
@@ -470,7 +488,6 @@ https://javadesde0.com/modularizando-nuestra-aplicacion-de-angular/
 <a id="4">[4}</a> 
 https://codigofacilito.com/articulos/angular-services
 
-<a id="5">[5}</a> 
 
 
     
