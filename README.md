@@ -429,6 +429,8 @@ Imagen tomada de: https://www.youtube.com/watch?v=BhRpBIhRWbY&list=PLU8oAlHdN5Bn
 1. Tendremos una barra de navegaciòn con: Home, Proyectos, Quiènes somos, Contacto 
 2. Importante que es el componente principal (App.Component) el encargado de gestionar el enrutamiento
 
+Si quieres aprender màs sobre el routing en angular mirar el siguiente enlace: https://angular.io/guide/router
+
 
 ## Ciclo de vida de un componente en angular 
 
@@ -487,6 +489,9 @@ https://javadesde0.com/modularizando-nuestra-aplicacion-de-angular/
 
 <a id="4">[4}</a> 
 https://codigofacilito.com/articulos/angular-services
+
+<a id="5">[5}</a> 
+https://angular.io/guide/router
 
 
 
