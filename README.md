@@ -431,6 +431,88 @@ Imagen tomada de: https://www.youtube.com/watch?v=BhRpBIhRWbY&list=PLU8oAlHdN5Bn
 
 Si quieres aprender màs sobre el routing en angular mirar el siguiente enlace: https://angular.io/guide/router
 
+**Pasos para enrutar en angular** 
+
+**PreRequisito**: 
+  - Tener definido en el componente principal app.component.html el menù (navbar) que nos va a servir para hacer el rooting de las url (tener definido nuestro menù principal)
+
+```html
+<nav class="navbar navbar-expand-sm bg-light">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Proyecto</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">¿Quiènes somos?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">Contacto</a>
+    </li>
+  </ul>
+</nav>
+```
+
+
+1. Crear en tu archivo app.module.ts el siguiente arreglo con tus rutas 
+
+```javascript
+const appRoutes : Routes =  [
+  //Se crea un objeto por cada ruta
+  {path:'', component:HomeComponentComponent},
+  {path:'/proyectos', component: ProyectosComponentComponent},
+  {path:'/quienes-somos', component: QuienesComponentComponent},
+  {path:'/contacto', component: ContactoComponentComponent},
+];
+```
+
+2. Importas el Routes y el RouterModule 
+```javascript
+import { Routes,  RouterModule} from '@angular/router';
+```
+
+3. Dentro de los imports en tu App.module.ts aplicas lo siguiente al Modulo que agregamos (RouterModule)
+```javascript
+ imports: [
+    BrowserModule,
+    FormsModule,
+    //Necesario para el tema del routing (le paso por argumento al forRoot la constante de rutas que creè anteriormente)
+    RouterModule.forRoot(appRoutes)
+  ],
+```
+
+4. Luego en el componente principal dentro del app.component.html especificar quièn serà el componente que va a gestionar todas las rutas 
+agregando la siguiente etiqueta 
+
+```html
+<router-outlet></router-outlet>
+```
+
+5. Dentro del componente anterior donde definimos las rutas que son las siguientes, colocamos en el href las mismas rutas que definimos en el array 
+
+```html
+<nav class="navbar navbar-expand-sm bg-light">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/proyectos">Proyecto</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/quienes-somos">¿Quiènes somos?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contacto">Contacto</a>
+    </li>
+  </ul>
+</nav>
+```
+
 
 ## Ciclo de vida de un componente en angular 
 
