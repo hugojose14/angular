@@ -542,6 +542,36 @@ constructor(router:Router, empleadoService:EmpleadosService){
     this.router.navigate(['']);
   }
 ```
+## Pasar paràmetros a las rutas 
+
+1. Prepararmos ruta en el path de rutas (App.module) 
+
+```javascript
+//Aquì agrego las rutas que tendremos (AppRouting)
+const appRoutes : Routes =  [
+  //Se crea un objeto por cada ruta
+  //De esta forma prepararmos la ruta
+  {path:'actualiza-empleado/:id', component: ActualizaComponentComponent}
+];
+```
+
+2. [routerLink] = "" nos va a permitir enrutar hacia donde nosotros queremos (Esto lo agregamos en dònde queremos hacer el link), aquì decimos que vamos a redireccionar a /actualiza-empleado y por paràmetro va a viajar el indice  y en el /:id anterior ya la ruta està preparada para recibir estos paràmetros.
+
+```html
+<div>
+     <a [routerLink]="['/actualiza-empleado',indice]">
+     {{indice+1}}: {{empleadoDeLista.nombre}} {{empleadoDeLista.apellido}} {{empleadoDeLista.cargo}} {{empleadoDeLista.salario}}
+     </a>
+</div>
+```
+
+3. Entonces ya las rutas se verìan asì de acuerdo a cada elemento 
+```bash 
+http://localhost:4200/actualiza-empleado/0
+http://localhost:4200/actualiza-empleado/1
+http://localhost:4200/actualiza-empleado/2
+```
+
 ## Ciclo de vida de un componente en angular 
 
 https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
