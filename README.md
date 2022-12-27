@@ -513,7 +513,35 @@ agregando la siguiente etiqueta
 </nav>
 ```
 
+## Routing programàtico (botones, links a las rutas) 
 
+1. Crear el botòn 
+
+```html 
+<div style="text-align: center;">
+    <button class="btn btn-primary" type="submit" (click) = "volverHome()">Ir a Inicio</button>
+</div>
+```
+
+2. Crear tu mètodo volverHome() en el component.ts 
+
+```javascript
+import { Router } from '@angular/router';
+
+//Inyectamos el servicio de Routin para enrutar
+private router:Router
+
+constructor(router:Router, empleadoService:EmpleadosService){
+    this.router = router;
+    this.empleadoService = empleadoService;
+  }
+
+  volverHome(){
+    //El mètodo navigate me va a permitir ir donde yo quiera
+    //Recordar que el home lo colocamos en el app.module.ts en el array de routing ""
+    this.router.navigate(['']);
+  }
+```
 ## Ciclo de vida de un componente en angular 
 
 https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
