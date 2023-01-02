@@ -572,6 +572,28 @@ http://localhost:4200/actualiza-empleado/1
 http://localhost:4200/actualiza-empleado/2
 ```
 
+## Query Params 
+
+Es poder enviar valores a travès de la ruta o url 
+
+#### Ejemplo de query params 
+
+![image](https://user-images.githubusercontent.com/45336770/210247483-49de6f9e-7d16-440a-acba-824042aa3daa.png)
+![image](https://user-images.githubusercontent.com/45336770/210247505-ae8f59f4-c451-4afe-bdc2-284e24092755.png)
+
+1. Para utilizar query params en angular lo hacemos de la siguiente forma, en donde si actualiza o elimina le paso por la url ?accion=1 el valor del paràmetro
+
+![image](https://user-images.githubusercontent.com/45336770/210247418-f9bac05a-9943-48c1-bc0b-a093db71a5dc.png)
+
+2. Rescato el valor de la url 
+
+![image](https://user-images.githubusercontent.com/45336770/210255975-fdec7b48-21cf-498e-b546-5fb637f35c5a.png)
+
+![image](https://user-images.githubusercontent.com/45336770/210256011-7af4508b-d5b2-45de-9056-96b0eefda90d.png)
+
+![image](https://user-images.githubusercontent.com/45336770/210256926-cac8c0d9-17f1-40ad-9eb9-4e277253e354.png)
+
+
 ## Ciclo de vida de un componente en angular 
 
 https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
