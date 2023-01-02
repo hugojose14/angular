@@ -25,6 +25,9 @@ Javascript, Typescript, HTML, CSS...
   - https://medium.com/front-end-weekly/learn-typescript-in-15-minutes-bf921cf355f5
   - https://medium.com/jspoint/typescript-a-beginners-guide-6956fe8bcf9e
 
+- Firebase (Optional) 
+  - https://firebase.google.com/?hl=es (You need register and create your first project)
+
 ## How to learn angular in 2022
 
 In this file you can learn angular for begginers, for example how do you use routes, environments, login,forms, services, routing, also how to create your first app. 
@@ -248,7 +251,7 @@ Por tanto, los módulos son mecanismo para subdividir en partes nuestra aplicaci
     id2 --> id6
     
 ```
-#Example directives
+#### Example directives
                 
 + Atributo
     + ngClass
@@ -610,6 +613,37 @@ ng g c error-personalizado
 3. En caso que llamemos una url que no existe tendremos el siguiente mensaje personalizado 
 ![image](https://user-images.githubusercontent.com/45336770/210258040-2f7a9495-ca8a-470a-b3bc-cc6c00ddbdb4.png)
 
+## Firebase 
+
+##  ¿Què es firebase?
+
++ Es una plataforma en la nube que es propiedad de google.  https://firebase.google.com/?hl=es
+
+##  ¿Para què sirve?
+
++ Simplificar la gestiòn de datos en el desarrollo de aplicaciones.
+
+##  ¿Còmo funciona?
+- Ofreciendo BBDD en tiempo real desde la nube.
+- BBDD no SQL. 
+- Almacena datos en fichero JSON.
+- Actualizaciòn automàtica de datos sin acciòn de desarrollador
+
+##  Ventajas
+
+- Ofrece hosting para almacèn de datos y despliegue (Deploy) de app en servidor de manera sencilla.
+- Gestiòn de usuarios sencilla 
+  -Identificaciòn de usuarios de forma tradicional 
+  -Identificaciòn con Google, Twitter, Facebook, Github
+- Operaciones CRUD directas sin picar còdigo 
+- Operaciones habituales con BBDD desde consola 
+- Despliegue de servicio sencillo 
+  - Creaciòn de funciones en la nube para automatizaciones
+  - Simulaciones de triggers o disparadores
+  - Etc
+- Envìo de notifaciones a usuarios
+- Analytics incorporado
+- Soporte gratuito
 
 ## Ciclo de vida de un componente en angular 
 
@@ -650,7 +684,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
 
 ## Feedback
 
