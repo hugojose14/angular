@@ -13,6 +13,7 @@ import { QuienesComponentComponent } from './quienes-component/quienes-component
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { Routes,  RouterModule} from '@angular/router';
 import { ActualizaComponentComponent } from './actualiza-component/actualiza-component.component';
+import { ErrorComponentComponent } from './error-component/error-component.component';
 
 
 //Aquì agrego las rutas que tendremos (AppRouting)
@@ -23,7 +24,8 @@ const appRoutes : Routes =  [
   {path:'quienes-somos', component: QuienesComponentComponent},
   {path:'contacto', component: ContactoComponentComponent},
   //De esta forma prepararmos la ruta
-  {path:'actualiza-empleado/:id', component: ActualizaComponentComponent}
+  {path:'actualiza-empleado/:id', component: ActualizaComponentComponent},
+  {path:'**',component:ErrorComponentComponent}
 ];
 
 
@@ -36,7 +38,8 @@ const appRoutes : Routes =  [
     ProyectosComponentComponent,
     QuienesComponentComponent,
     ContactoComponentComponent,
-    ActualizaComponentComponent
+    ActualizaComponentComponent,
+    ErrorComponentComponent
   ],
   imports: [
     BrowserModule,

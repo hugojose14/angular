@@ -18,6 +18,7 @@ export class ActualizaComponentComponent implements OnInit{
   private empleadoService:EmpleadosService;
   private activatedRoute: ActivatedRoute;
   empleados:Empleado[]= []; 
+  accion:number;
 
   constructor(router:Router, empleadoService:EmpleadosService, activatedRoute:ActivatedRoute){
     this.router = router;
@@ -39,7 +40,7 @@ export class ActualizaComponentComponent implements OnInit{
     this.cuadroSalario = empleado.salario;
     this.cuadroApellido= empleado.apellido;
     this.cuadroCargo = empleado.cargo;
-
+    this.accion = parseInt(this.activatedRoute.snapshot.queryParams['accion']);
   }
 
 
@@ -49,7 +50,7 @@ export class ActualizaComponentComponent implements OnInit{
   cuadroSalario: number = 0;
   indice:number;
 
-
+/*
   actualizaEmpleado(){
     let empleado = new Empleado(this.cuadroNombre,this.cuadroApellido,this.cuadroCargo, this.cuadroSalario);
     //this.empleadoService.agregarEmpleadoServicio(empleado);
@@ -62,10 +63,31 @@ export class ActualizaComponentComponent implements OnInit{
     this.empleadoService.eliminarEmpleado(this.indice);
     this.volverHome();
   }
+   */
   
   volverHome(){
     //El mètodo navigate me va a permitir ir donde yo quiera
     this.router.navigate(['']);
   }
+
+ 
+
+
+  actualizaEmpleado(){
+
+    if(this.accion == 1){
+      let empleado = new Empleado(this.cuadroNombre,this.cuadroApellido,this.cuadroCargo, this.cuadroSalario);
+      //this.empleadoService.agregarEmpleadoServicio(empleado);
+      this.empleadoService.actualizaEmpleado(empleado,this.indice);
+      this.volverHome();
+  
+    }
+    else{
+      this.empleadoService.eliminarEmpleado(this.indice);
+      this.volverHome();
+    }
+
+  }
+
 
 }
