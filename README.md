@@ -593,6 +593,23 @@ Es poder enviar valores a travès de la ruta o url
 
 ![image](https://user-images.githubusercontent.com/45336770/210256926-cac8c0d9-17f1-40ad-9eb9-4e277253e354.png)
 
+## Pagina de error personalizada (404)
+
+1. Crear el component (el nombre que quieras)
+
+```bash
+ng g c error-personalizado
+```
+
+2. Agregamos el component creado a nuestro path de rutas, teniendo en cuenta que el ** es un comodìn que le indica a angular que cualquier otra ruta que no haga parte de las anteriores que definimos lo lleve al sitio de error.
+
+![image](https://user-images.githubusercontent.com/45336770/210257974-006ded53-e8f6-4f41-9d03-146decd7e191.png)
+
+![image](https://user-images.githubusercontent.com/45336770/210258071-81c652d2-ca03-4914-a1bc-bdebbc85a10e.png)
+
+3. En caso que llamemos una url que no existe tendremos el siguiente mensaje personalizado 
+![image](https://user-images.githubusercontent.com/45336770/210258040-2f7a9495-ca8a-470a-b3bc-cc6c00ddbdb4.png)
+
 
 ## Ciclo de vida de un componente en angular 
 
