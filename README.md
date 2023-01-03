@@ -668,6 +668,21 @@ ng g c error-personalizado
 
 ## Obervables 
 
+Nos permiten realizar operaciones asyncronas. En segundo plano sin necesidad de hacer consultas select por ejemplo en nuestra base de datos. Es un objeto que se encuentra vigilante en el almacén de datos de forma asincrona va actualizando nuestra información en tiempo real. 
+
+- Con el suscribe vigilamos cualquier movimiento que hace el observable
+- misEmpleados tendrá la información que se encuentra dentro del observable
+
+```Javascript 
+obtenerEmpleados(){
+        return this.httpClient.get('https://mis-clientes-64ec7-default-rtdb.firebaseio.com/datos.json').subscribe(
+            misEmpleados => {
+                console.log(misEmpleados);
+            }
+        );
+    }
+``` 
+
 https://appdividend.com/2022/08/26/observables-in-rxjs/
 
 https://appdividend.com/2022/02/03/angular-httpclient/
