@@ -14,6 +14,9 @@ import { ContactoComponentComponent } from './contacto-component/contacto-compon
 import { Routes,  RouterModule} from '@angular/router';
 import { ActualizaComponentComponent } from './actualiza-component/actualiza-component.component';
 import { ErrorComponentComponent } from './error-component/error-component.component';
+import { DataService } from './data.service';
+import { HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component'
 
 
 //Aquì agrego las rutas que tendremos (AppRouting)
@@ -39,15 +42,19 @@ const appRoutes : Routes =  [
     QuienesComponentComponent,
     ContactoComponentComponent,
     ActualizaComponentComponent,
-    ErrorComponentComponent
+    ErrorComponentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     //Necesario para el tema del routing (le paso las rutas)
     RouterModule.forRoot(appRoutes),
+     // import HttpClientModule after BrowserModule.
+     HttpClientModule,
   ],
-  providers: [ServicioEmpleadosService,EmpleadosService],
+  //Aquì se registran los servicios
+  providers: [ServicioEmpleadosService,EmpleadosService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

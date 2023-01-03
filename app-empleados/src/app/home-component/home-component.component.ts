@@ -15,6 +15,8 @@ export class HomeComponentComponent implements OnInit{
   empleadoService: EmpleadosService;
   empleados:Empleado[]= [];
 
+  empleadoPrueba= [{apellido: 'sdsd', cargo: 'sdsd', nombre: 'sd', salario: 3333}];
+
   constructor( servicioEmpleadoService: ServicioEmpleadosService,
     empleadoService:EmpleadosService){
     this.servicioEmpleadoService = servicioEmpleadoService;
@@ -26,7 +28,13 @@ export class HomeComponentComponent implements OnInit{
 
   //Podemos llenar el arreglo de las dos maneras (constructor o con ngOnInit)
   ngOnInit(): void {
-    this.empleados = this.empleadoService.obtenerEmpleados();
+    //this.empleados = this.empleadoService.obtenerEmpleados();
+    console.log(this.empleadoService.cargarEmpleados());
+    this.empleadoService.cargarEmpleados().subscribe(data=>{
+      this.empleados = Object.values(data);
+      this.empleadoService.setEmpleados(this.empleados);
+    })
+
   }
 
 
