@@ -645,6 +645,35 @@ ng g c error-personalizado
 - Analytics incorporado
 - Soporte gratuito
 
+## Almacenando datos en Firebase (Base de datos Realtime vs Firestore)
+
+#### Realtime (Es màs antigua esta base de datos)
++ NoSql 
++ Almaèn de datos en àrbol json 
++ Permite ordenar o filtrar consultraws, pero no ambas a la vez
++ Escritura mediante instrucciones individuales
++ Soporte offline a Android e iOS
++ Escalabilidad compleja
++ Menos caro que firestore (sobrepasando cuotas gratuitas)
+
+#### Firestore 
+
++ NoSql
++ Almacèn de datos en documentos y subdocumentos organizados en colecciones
++ Soporte offiline Android, iOS, web
++ Pueden combinar ordenamiento y filtro en la misma consulta 
++ Escritura por lotes (batch)
++ Escalabilidad sencilla y automàtica 
++ Màs caro que Realtime (sobrepasando cuotas gratuitas)
+
+## Obervables 
+
+https://appdividend.com/2022/08/26/observables-in-rxjs/
+
+https://appdividend.com/2022/02/03/angular-httpclient/
+
+https://www.positronx.io/angular-httpclient-http-service/
+
 ## Ciclo de vida de un componente en angular 
 
 https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
