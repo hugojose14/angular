@@ -672,6 +672,7 @@ Nos permiten realizar operaciones asyncronas. En segundo plano sin necesidad de 
 
 - Con el suscribe vigilamos cualquier movimiento que hace el observable
 - misEmpleados tendrá la información que se encuentra dentro del observable
+- Ejemplo de un get y put con HttpClient 
 
 ```Javascript 
 obtenerEmpleados(){
@@ -680,6 +681,18 @@ obtenerEmpleados(){
                 console.log(misEmpleados);
             }
         );
+    }
+``` 
+
+```Javascript 
+guardarEmpleados(empleados:Empleado[]){
+        console.log("Llamando al servicio guardarEmpleados");
+        this.httpClient.put('https://mis-clientes-64ec7-default-rtdb.firebaseio.com/datos.json',empleados).subscribe(
+            {
+                next: (v) => console.log("Se ha guardado la siguiente información => "  + v),
+                error: (y) => console.log("Error con la siguiente información => " + y)
+            }
+        )
     }
 ``` 
 
