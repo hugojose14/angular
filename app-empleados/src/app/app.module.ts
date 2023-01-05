@@ -19,6 +19,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component'
 import { LoginService } from './login/login.service';
 import { CookieService } from 'ngx-cookie-service';
+import { LoginGuardian } from './login/login-guardian';
 
 
 //Aquì agrego las rutas que tendremos (AppRouting)
@@ -27,7 +28,7 @@ const appRoutes : Routes =  [
   {path:'', component:HomeComponentComponent},
   {path:'proyectos', component: ProyectosComponentComponent},
   {path:'quienes-somos', component: QuienesComponentComponent},
-  {path:'contacto', component: ContactoComponentComponent},
+  {path:'contacto', component: ContactoComponentComponent,canActivate:[LoginGuardian]},
   //De esta forma prepararmos la ruta
   {path:'actualiza-empleado/:id', component: ActualizaComponentComponent},
   {path:'login', component: LoginComponent},
@@ -56,8 +57,8 @@ const appRoutes : Routes =  [
      // import HttpClientModule after BrowserModule.
      HttpClientModule,
   ],
-  //Aquì se registran los servicios
-  providers: [ServicioEmpleadosService,EmpleadosService, DataService, LoginService, CookieService],
+  //Aquì se registran los servicios, guardianes
+  providers: [ServicioEmpleadosService,EmpleadosService, DataService, LoginService, CookieService,LoginGuardian],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
