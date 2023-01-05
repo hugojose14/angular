@@ -702,6 +702,31 @@ https://appdividend.com/2022/02/03/angular-httpclient/
 
 https://www.positronx.io/angular-httpclient-http-service/
 
+## Creación de cookies en angular 
+
+1. Instalar el package de las cookies 
+
+```bash
+npm i ngx-cookie-service --save 
+```
+
+2. Importar en el módulo donde lo requieras el servicio 
+
+```javascript
+import { CookieService } from 'ngx-cookie-service';
+providers: [... CookieService]
+```
+
+3. Inyectarla en el servicio donde lo llames 
+
+```javascript
+constructor(private router:Router, private cookie: CookieService){
+  }
+
+```
+
+![image](https://user-images.githubusercontent.com/45336770/210804245-239beb82-dad8-45a2-9caa-13a56917a999.png)
+
 ## Ciclo de vida de un componente en angular 
 
 https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
