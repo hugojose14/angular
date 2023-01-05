@@ -2,16 +2,22 @@ import { HttpClient } from "@angular/common/http";
 import {Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Empleado } from "./empleado.model";
+import { LoginService } from "./login/login.service";
 
 @Injectable()
 export class DataService{
 
     private httpClient:HttpClient;
-    constructor(httpClient:HttpClient){
+    private loginService: LoginService;
+
+    constructor(httpClient:HttpClient,
+        loginService: LoginService){
+        this.loginService = loginService;
         this.httpClient = httpClient;
     }
 
     guardarEmpleados(empleados:Empleado[]){
+
         console.log("Llamando al servicio guardarEmpleados");
         this.httpClient.put('https://mis-clientes-64ec7-default-rtdb.firebaseio.com/datos.json',empleados).subscribe(
             {
@@ -22,8 +28,12 @@ export class DataService{
     }
 
     obtenerEmpleados():Observable<Object>{
+        
+        //Obtener la firma del token
+        const token = this.loginService.getIdToken();
+
         //Con el suscribe vigilamos cualquier movimiento que hace el observable
-        return this.httpClient.get('https://mis-clientes-64ec7-default-rtdb.firebaseio.com/datos.json');
+        return this.httpClient.get('https://mis-clientes-64ec7-default-rtdb.firebaseio.com/datos.json?auth=' + token);
     }
 
     actualizarEmpleado(indice:number, empleado:Empleado){

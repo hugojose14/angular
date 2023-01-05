@@ -14,8 +14,17 @@
     <li class="nav-item">
       <a class="nav-link" href="/contacto">Contacto</a>
     </li>
+
     <li class="nav-item">
       <a class="nav-link" href="/actualiza-empleado">Actualiza Empleado</a>
+    </li>
+
+    <li class="nav-item" style="margin-left: 700px;" *ngIf= "!estaLogueado()">
+      <a class="nav-link"  routerLink="/login">Login</a>
+    </li>
+
+    <li class="nav-item"  *ngIf= "estaLogueado()">
+      <a class="nav-link"  (click)= "usuarioLogout()" >Logout</a>
     </li>
   </ul>
 

@@ -17,6 +17,8 @@ import { ErrorComponentComponent } from './error-component/error-component.compo
 import { DataService } from './data.service';
 import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component'
+import { LoginService } from './login/login.service';
+import { CookieService } from 'ngx-cookie-service';
 
 
 //Aquì agrego las rutas que tendremos (AppRouting)
@@ -28,6 +30,7 @@ const appRoutes : Routes =  [
   {path:'contacto', component: ContactoComponentComponent},
   //De esta forma prepararmos la ruta
   {path:'actualiza-empleado/:id', component: ActualizaComponentComponent},
+  {path:'login', component: LoginComponent},
   {path:'**',component:ErrorComponentComponent}
 ];
 
@@ -54,7 +57,7 @@ const appRoutes : Routes =  [
      HttpClientModule,
   ],
   //Aquì se registran los servicios
-  providers: [ServicioEmpleadosService,EmpleadosService, DataService],
+  providers: [ServicioEmpleadosService,EmpleadosService, DataService, LoginService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
