@@ -722,10 +722,90 @@ providers: [... CookieService]
 ```javascript
 constructor(private router:Router, private cookie: CookieService){
   }
-
 ```
 
 ![image](https://user-images.githubusercontent.com/45336770/210804245-239beb82-dad8-45a2-9caa-13a56917a999.png)
+
+## Proteger una página bajo login 
+
+-En angular se utilizan los guardianos para proteger paginas 
+-Se le denomina guardian, porque está atento a las páginas que nosotros queremos proteger
+
+1. Para declarar un guardian lo hacemos de la siguiente manera (creamos una clase normal login-guardian-ts e implementamos CanActivate)
+
+```javascript
+import { Injectable } from "@angular/core";
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
+import { LoginService } from "./login.service";
+
+@Injectable()
+export class LoginGuardian implements CanActivate{
+
+    constructor(private loginService:LoginService, private router:Router){}
+
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot){
+
+        if(this.loginService.esUsuarioLogueado()){
+            return true;
+        }
+        else{
+            this.router.navigate(['login']);
+            return false;
+        }
+    }
+
+}
+```
+
+2. Llamamos en guardian en el modulo principal o en el modulo donde quieras utilizarlo
+
+```javascript
+  providers: [...,LoginGuardian],
+```
+
+3. Luego vamos a la ruta de los path y hacemos lo siguiente para decirle al guardian que proteja esa ruta (ejemplo la ruta de contacto queremos protegerla)
+
++ Path de rutas
+```javascript
+const appRoutes : Routes =  [
+  //Se crea un objeto por cada ruta
+  {path:'', component:HomeComponentComponent},
+  {path:'proyectos', component: ProyectosComponentComponent},
+  {path:'quienes-somos', component: QuienesComponentComponent},
+  {path:'contacto', component: ContactoComponentComponent,canActivate:[LoginGuardian]},
+  {path:'actualiza-empleado/:id', component: ActualizaComponentComponent},
+  {path:'login', component: LoginComponent},
+  {path:'**',component:ErrorComponentComponent}
+];
+```
+
++ Ruta protegida con el guardian
+```javascript
+{path:'contacto', component: ContactoComponentComponent,canActivate:[LoginGuardian]},
+```
+
+## Desplegar la aplicación de angular 
+
+1. Ejecutar el siguiente comando 
+```bash 
+ng build --configuration production --aot 
+```
+
+2. Se debió haber creado la siguiente carpeta 
+
+![image](https://user-images.githubusercontent.com/45336770/210836838-4260b0a3-165b-413b-9530-f827306867a7.png)
+
+3. Nos vamos a firebase  y a hosting 
+
+![image](https://user-images.githubusercontent.com/45336770/210837784-18399155-c61a-44ee-8a43-2feef88e41aa.png)
+
+4. Ejecutamos el siguiente comando en la consola de nuestro proyecto 
+
+![image](https://user-images.githubusercontent.com/45336770/210837873-e001a8df-7e98-4448-b486-5bebe5ffa8c0.png)
+
+![image](https://user-images.githubusercontent.com/45336770/210838114-40429f56-75f3-44ba-9c0f-88f8c5ebb026.png)
+
+
 
 ## Ciclo de vida de un componente en angular 
 
