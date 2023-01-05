@@ -722,10 +722,31 @@ providers: [... CookieService]
 ```javascript
 constructor(private router:Router, private cookie: CookieService){
   }
-
 ```
 
 ![image](https://user-images.githubusercontent.com/45336770/210804245-239beb82-dad8-45a2-9caa-13a56917a999.png)
+
+## Proteger una página bajo login 
+
+-En angular se utilizan los guardianos para proteger paginas 
+-Se le denomina guardian, porque está atento a las páginas que nosotros queremos proteger
+
+1. Para declarar un guardian lo hacemos de la siguiente manera (creamos una clase normal login-guardian-ts e implementamos CanActivate)
+
+```javascript
+import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from "@angular/router";
+import { Observable } from "rxjs";
+
+export class LoginGuardian implements CanActivate{
+    constructor(){}
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+        throw new Error("Method not implemented.");
+    }
+}
+```
+
+
+
 
 ## Ciclo de vida de un componente en angular 
 
