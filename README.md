@@ -784,6 +784,26 @@ const appRoutes : Routes =  [
 {path:'contacto', component: ContactoComponentComponent,canActivate:[LoginGuardian]},
 ```
 
+## Desplegar la aplicación de angular 
+
+1. Ejecutar el siguiente comando 
+```bash 
+ng build --configuration production --aot 
+```
+
+2. Se debió haber creado la siguiente carpeta 
+
+![image](https://user-images.githubusercontent.com/45336770/210836838-4260b0a3-165b-413b-9530-f827306867a7.png)
+
+3. Nos vamos a firebase  y a hosting 
+
+![image](https://user-images.githubusercontent.com/45336770/210837784-18399155-c61a-44ee-8a43-2feef88e41aa.png)
+
+4. Ejecutamos el siguiente comando en la consola de nuestro proyecto 
+
+![image](https://user-images.githubusercontent.com/45336770/210837873-e001a8df-7e98-4448-b486-5bebe5ffa8c0.png)
+
+![image](https://user-images.githubusercontent.com/45336770/210838114-40429f56-75f3-44ba-9c0f-88f8c5ebb026.png)
 
 
 
