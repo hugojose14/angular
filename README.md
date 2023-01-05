@@ -734,15 +734,54 @@ constructor(private router:Router, private cookie: CookieService){
 1. Para declarar un guardian lo hacemos de la siguiente manera (creamos una clase normal login-guardian-ts e implementamos CanActivate)
 
 ```javascript
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from "@angular/router";
-import { Observable } from "rxjs";
+import { Injectable } from "@angular/core";
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
+import { LoginService } from "./login.service";
 
+@Injectable()
 export class LoginGuardian implements CanActivate{
-    constructor(){}
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-        throw new Error("Method not implemented.");
+
+    constructor(private loginService:LoginService, private router:Router){}
+
+    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot){
+
+        if(this.loginService.esUsuarioLogueado()){
+            return true;
+        }
+        else{
+            this.router.navigate(['login']);
+            return false;
+        }
     }
+
 }
+```
+
+2. Llamamos en guardian en el modulo principal o en el modulo donde quieras utilizarlo
+
+```javascript
+  providers: [...,LoginGuardian],
+```
+
+3. Luego vamos a la ruta de los path y hacemos lo siguiente para decirle al guardian que proteja esa ruta (ejemplo la ruta de contacto queremos protegerla)
+
++ Path de rutas
+```javascript
+const appRoutes : Routes =  [
+  //Se crea un objeto por cada ruta
+  {path:'', component:HomeComponentComponent},
+  {path:'proyectos', component: ProyectosComponentComponent},
+  {path:'quienes-somos', component: QuienesComponentComponent},
+  {path:'contacto', component: ContactoComponentComponent,canActivate:[LoginGuardian]},
+  {path:'actualiza-empleado/:id', component: ActualizaComponentComponent},
+  {path:'login', component: LoginComponent},
+  {path:'**',component:ErrorComponentComponent}
+];
+```
+
++ Ruta protegida con el guardian
+```javascript
+{path:'contacto', component: ContactoComponentComponent,canActivate:[LoginGuardian]},
 ```
 
 
